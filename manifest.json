@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "gta6-bar",
+  "name": "GTA 6 Bar",
+  "version": "1.0.0",
+  "author": "Daniel Bohry",
+  "license": "MIT",
+  "description": "Omarchy bar for the GTA VI theme: each section floats in its own rounded island with a soft sunset gradient border.",
+  "kinds": [
+    "bar"
+  ],
+  "entryPoints": {
+    "bar": "Bar.qml"
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.bar"
+  }
+}
