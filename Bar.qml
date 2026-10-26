@@ -569,11 +569,13 @@ Item {
   readonly property bool vertical: position === "left" || position === "right"
   readonly property int barSize: vertical ? Style.bar.sizeVertical : Style.bar.sizeHorizontal
 
-  // GTA VI floating islands: on the gta-vi theme a horizontal bar drops its
+  // GTA VI floating islands: on the GTA VI theme a horizontal bar drops its
   // full-width strip and floats each section in its own rounded island with
   // the theme's sunset gradient border. Every other theme gets the stock bar.
   property string themeName: ""
-  readonly property bool islands: themeName === "gta-vi" && !vertical
+  // `omarchy theme install` names the theme gta6 after its repo, while a
+  // local checkout may be gta-vi.
+  readonly property bool islands: (themeName === "gta-vi" || themeName === "gta6") && !vertical
   readonly property real islandGap: islands ? Style.space(5) : 0
   readonly property real islandPadding: Style.space(7)
   // Side islands line up with window edges at Omarchy's default gaps_out.

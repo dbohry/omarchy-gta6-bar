@@ -13,7 +13,7 @@ Omarchy's status bar, dressed up for the GTA VI theme. A drop-in replacement for
 - **Lined up with windows:** the side islands start at Omarchy's default 10px window gap, so their outer edges line up with the windows below.
 - **Snug tray:** the right island starts at the tray's chevron rather than the space reserved for hidden apps, and grows as the drawer slides open.
 
-The islands only appear while the current theme is `gta-vi` and the bar is at the top or bottom. On every other theme, or on a left or right bar, it looks and behaves exactly like the stock bar. Your widgets, layout and settings in `shell.json` are used as they are.
+The islands only appear while the current theme is GTA VI (`gta6` when installed with `omarchy theme install`, or `gta-vi`) and the bar is at the top or bottom. On every other theme, or on a left or right bar, it looks and behaves exactly like the stock bar. Your widgets, layout and settings in `shell.json` are used as they are.
 
 Pairs well with [GTA 6 Workspaces](https://github.com/dbohry/omarchy-gta6-workspaces), whose sliding Vice pink pill matches the islands.
 
