@@ -593,23 +593,6 @@ Item {
     }
   }
 
-  // Empty space at the start of a section that the island should skip. The
-  // tray reserves its drawer's full width and slides hidden apps into it, so
-  // until the drawer opens that space is blank.
-  function leadingSlack(list) {
-    var row = list ? list.item : null
-    if (!row) return 0
-    var first = null
-    for (var i = 0; i < row.children.length; i++) {
-      var child = row.children[i]
-      if (child.activeItem === undefined || !child.visible || child.width <= 0) continue
-      if (!first || child.x < first.x) first = child
-    }
-    var widget = first ? first.activeItem : null
-    if (!widget || widget.drawerExtent === undefined || widget.revealExtent === undefined) return 0
-    return Math.max(0, widget.drawerExtent - widget.revealExtent)
-  }
-
   FileView {
     path: root.stateHome + "/omarchy/current/theme.name"
     watchChanges: true
@@ -1605,7 +1588,7 @@ Item {
     id: island
 
     property Item target: null
-    property real spanStart: target ? target.x + root.leadingSlack(target) : 0
+    property real spanStart: target ? target.x : 0
     property real spanEnd: target ? target.x + target.width : 0
     property bool shown: target ? target.visible && target.width > 0 : true
 
